@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="managmentapp.MainPage"
+             BackgroundImageSource="download.png">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <!-- Image -->
+            <Image Source="dotnet_bot.png"
+                   HeightRequest="185"
+                   Aspect="AspectFit"
+                   SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <!-- City Search Bar with Frame for Border -->
+            <Frame Padding="10,5" BorderColor="#cccccc" CornerRadius="5" HasShadow="False">
+                <Entry x:Name="CityEntry" Placeholder="Enter city name" FontSize="18" HorizontalOptions="Fill" VerticalOptions="Center" />
+            </Frame>
+
+            <!-- Weather Button -->
+            <Button x:Name="WeatherButton" Text="Get Weather" Clicked="OnWeatherButtonClicked" HorizontalOptions="Fill" />
+
+            <!-- Weather Activity Indicator (Spinner) -->
+            <ActivityIndicator x:Name="WeatherActivityIndicator" IsRunning="False" IsVisible="False" Color="Blue" HorizontalOptions="Center" />
+
+            <!-- Weather Information or Error Label -->
+            <Label x:Name="WeatherLabel" Text="Weather data will appear here." FontSize="18" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+
